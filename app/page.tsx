@@ -3,13 +3,13 @@ import ProductCard from "./components/product-card";
 
 export default function Home() {
   return (
-    <section className="max-w-7xl py-24 px-4 mx-auto">
+    <section className="max-w-7xl py-10 md:py-24 px-4 mx-auto">
       <div className="">
 
-        <div className="grid grid-cols-8 gap-6">
+        <div className="flex flex-col md:grid grid-cols-8 gap-6">
 
           {/* Left-side column */}
-          <div className="col-span-3 w-full">
+          <div className="col-span-8 lg:col-span-3 w-full">
             {/* Promotion */}
             <div className="flex flex-col gap-10 justify-between items-center bg-white  rounded-md shadow-sm">
               {/* Promotion Description */}
@@ -31,13 +31,13 @@ export default function Home() {
           </div>
 
           {/* Right-side column */}
-          <div className="col-span-5 flex flex-col justify-between gap-8 p-5 md:px-2 md:py-0 w-full">
+          <div className="col-span-8 lg:col-span-5 flex flex-col justify-between gap-8 p-5 md:px-2 md:py-0 w-full">
             {/* Title */}
             <div className="">
               <h3 className="text-4xl text-black font-semibold">Top Picks</h3>
             </div>
             {/* Product Grid List */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {/* Products */}
               <ProductCard />
               <ProductCard />
@@ -47,7 +47,7 @@ export default function Home() {
               <ProductCard />
             </div>
             {/* Promotion */}
-            <div className="flex gap-10 justify-between items-center bg-white  rounded-md shadow-sm p-8">
+            <div className="flex flex-col sm:flex-row gap-10 justify-around items-center bg-white rounded-md shadow-sm p-8">
               {/* Promotion Image */}
               <div className="flex justify-center items-center">
                 <img 
